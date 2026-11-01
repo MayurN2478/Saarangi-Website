@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #E9DCC7;
+}
+::-webkit-scrollbar-thumb {
+  background: #642D2B;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3B2118;
+}
+
+/* Vintage ornamental divider styling */
+.ornament-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.ornament-line::before,
+.ornament-line::after {
+  content: "";
+  height: 1px;
+  width: 4rem;
+  background: linear-gradient(to right, transparent, #C49A55);
+}
+.ornament-line::after {
+  background: linear-gradient(to left, transparent, #C49A55);
+}
+
+/* Subtle gold text shimmer */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #E0B979 0%, #C49A55 50%, #9E7637 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Vintage backdrop image overlay */
+.vintage-overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(30, 16, 11, 0.75) 0%,
+    rgba(59, 33, 24, 0.85) 60%,
+    rgba(30, 16, 11, 0.95) 100%
+  );
+}
+
+.vintage-overlay-subtle {
+  background: linear-gradient(
+    180deg,
+    rgba(30, 16, 11, 0.45) 0%,
+    rgba(59, 33, 24, 0.7) 100%
+  );
+}
